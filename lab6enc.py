@@ -1,5 +1,6 @@
 # version control encoder - lab 6
 # Author: Guilherme Armin Da Silva Anton (aka Armin)
+# Partner: Ezekiel Pasion
 
 # importing these two to handle script exit behaviour
 import shlex
@@ -14,6 +15,14 @@ def encode(original):
         num += 3
         encoded += f"{num}"
     return encoded
+
+def decode(key):
+    decoded = ""
+    for char in key:
+        number = int(char)
+        number -=3
+        decoded += str(number)
+    return decoded
 
 # main function
 def main() -> int:
@@ -35,11 +44,11 @@ def main() -> int:
                 encoded = encode(original)
             print("Your password has been encoded and stored!")
 
-        # elif option == "2":
-        #     if encoded == "":
-        #         encoded = input("Please enter your password to decode: ")
-        #         original = decode(encoded)
-        #     print(f"The encoded password is {encoded}, and the original password is {original}.")
+        elif option == "2":
+            if encoded == "":
+                encoded = input("Please enter your password to decode: ")
+                original = decode(encoded)
+            print(f"The encoded password is {encoded}, and the original password is {original}.")
 
         elif option == "3":
             break
