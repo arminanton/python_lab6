@@ -1,6 +1,5 @@
 # version control encoder - lab 6
 # Author: Guilherme Armin Da Silva Anton (aka Armin)
-# Partner: Yutaka Stephens
 
 # importing these two to handle script exit behaviour
 import shlex
